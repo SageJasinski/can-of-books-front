@@ -1,0 +1,34 @@
+@import "./Variables.scss";
+
+body, html{
+    margin: auto;
+    max-width: 1500px;
+}
+
+nav {
+    background-color: $purple;
+    color: $black;
+    font-size: 30px;
+}
+
+nav .nav-link{
+    margin: 30px;
+}
+
+nav .nav-link:hover {
+    transition-delay: 0.2s;
+    transition-property: font-size;
+    color: $yellow;
+    font-size: 35px;
+}
+
+nav .navbar-brand {
+    margin: 10px;
+    font-size: 30px;
+    color: $lavender;
+}
+nav .navbar-brand:hover {
+    margin: 10px;
+    font-size: 30px;
+    color: $lavender;
+}

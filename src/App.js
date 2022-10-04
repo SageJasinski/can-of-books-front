@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import About from './About'
 import Footer from './Footer';
 import BestBooks from './BestBooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,12 +17,8 @@ class App extends React.Component {
         <Router>
           <Header />
           <Routes>
-            <Route 
-              exact path="/"
-              element={<BestBooks />}
-            >
-            </Route>
-            {/* PLACEHOLDER: add a route with a path of '/about' that renders the `About` component */}
+            <Route exact path="/" element={<BestBooks />}></Route>
+            <Route exact path='/about' element={<About />}>About</Route>
           </Routes>
           <Footer />
         </Router>

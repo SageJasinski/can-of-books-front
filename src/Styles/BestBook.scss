@@ -1,0 +1,20 @@
+@import './Variables.scss';
+
+.title {
+    color: $purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 10px solid $lavender;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $purple;
+    margin: 30px;
+}
