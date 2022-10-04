@@ -12,7 +12,7 @@ Books are life-changing. They have the power to enlighten, educate, entertain, h
 
 What hours will you be available to communicate?
 
-- Regular school hours and slack past 6	
+- Regular school hours and slack past 6
 
 What platform will you use to communicate (ie. Slack, phone …)?
 
