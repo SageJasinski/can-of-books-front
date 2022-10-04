@@ -2,7 +2,7 @@
 
 body, html{
     margin: auto;
-    max-width: 1500px;
+    // max-width: 1500px;
 }
 
 nav {
@@ -13,6 +13,8 @@ nav {
 
 nav .nav-link{
     margin: 30px;
+    transition-delay: 00.2s;
+    transition-property:font-size ;
 }
 
 nav .nav-link:hover {
