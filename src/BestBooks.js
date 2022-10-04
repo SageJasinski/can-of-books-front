@@ -2,13 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from 'react-bootstrap/Carousel';
 import './Styles/BestBook.scss';
+import BookItem from './BookCaroselItem';
 
 class BestBooks extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      books: []
+      books: [],
     }
   }
 
@@ -16,10 +17,21 @@ class BestBooks extends React.Component {
   async getBooks(){
 
     try {
-      const PATH = `http://localhost:3001/books`;
+      const PATH = `${process.env.REACT_APP_HEROKU_PATH}/books`;
       const request = await axios.get(PATH);
 
       this.setState({books: request.data})
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  componentDidMount = async () => {
+    try {
+      const PATH = `${process.env.REACT_APP_HEROKU_PATH}/book`;
+      const request = await axios.get(PATH);
+      this.setState({books: request.data});
+      console.log(request.data);
     } catch (error) {
       console.error(error);
     }
@@ -34,8 +46,11 @@ class BestBooks extends React.Component {
 
         {this.state.books.length > 0 && 
         <Carousel>
-          {this.state.books.map((book, index) => { 
-              return <Carousel.Item key={index} data-pause="hover">{book}</Carousel.Item>
+          {this.state.books.map((book, index) => {
+
+            let newBook = <BookItem src="https://via.placeholder.com/150" title={book.title} alt="Place holder image" description={book.description}/>
+
+              return <Carousel.Item key={index} data-pause="hover">{newBook}</Carousel.Item>
             }
           )}
         </Carousel>
