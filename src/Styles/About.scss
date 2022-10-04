@@ -1,0 +1,22 @@
+@import './Variables';
+
+
+h2{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: $purple;
+}
+
+a {
+    text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: $lavender;
+}
+
+a:hover{
+    text-decoration: none;
+    color: $yellow;
+}
