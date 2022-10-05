@@ -19,3 +19,29 @@
     color: $purple;
     margin: 30px;
 }
+
+.carousel img, .carousel h3, .carousel p, .carousel button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.carousel {
+    background-color: $lavender;
+    max-width: 600px;
+    margin: auto;
+    height: 400px;
+}
+
+.carousel-indicators button
+{
+  width : 15px!important;
+  height: 15px !important;
+  border-radius: 100%;
+  margin: 5px !important;
+}
+.carousel-control-prev-icon{
+    color: $yellow;
+}
