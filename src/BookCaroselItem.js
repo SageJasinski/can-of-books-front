@@ -2,16 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 
 class BookItem extends React.Component{
-    constructor(props){
-        super(props);
-        this.satte = {
-
-        }
-    };
-
-    deleteBook = async () =>{
-
-    }
 
     render(){
         return(
