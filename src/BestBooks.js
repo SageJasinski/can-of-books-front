@@ -5,6 +5,7 @@ import './Styles/BestBook.scss';
 import BookItem from './BookCaroselItem';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Collapse from 'react-bootstrap/Collapse';
 
 class BestBooks extends React.Component {
 
@@ -12,6 +13,7 @@ class BestBooks extends React.Component {
     super(props);
     this.state = {
       books: [],
+      showForm: false,
     }
   }
 
@@ -63,6 +65,12 @@ class BestBooks extends React.Component {
     }
   }
 
+  showFormHandler = async () =>{
+    this.setState(previous => ({
+      showForm: !previous.showForm
+    }));
+  }
+
   render() {
 
     /* TODO: render all the books in a Carousel */
@@ -86,9 +94,13 @@ class BestBooks extends React.Component {
         <h2 className='message'>Your book collection seems to be empty</h2>
         }
 
+        <Button onClick={() => this.showFormHandler()} aria-expanded={this.state.showForm} aria-controls="collapse-form">Add a book</Button>
+
+
+        <Collapse in={this.state.showForm}>
         <Form onSubmit={this.submitListener}>
+          <Form.Label>Add a book!</Form.Label>
           <Form.Group controlId="title">
-            <Form.Label>Add a book!</Form.Label>
             <Form.Control placeholder='Enter the title'></Form.Control>
           </Form.Group>
 
@@ -98,7 +110,8 @@ class BestBooks extends React.Component {
 
           <Button type="submit">Add Book</Button>
         </Form>
-        
+        </Collapse>
+
       </>
     )
   }
