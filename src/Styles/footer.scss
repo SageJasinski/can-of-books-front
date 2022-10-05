@@ -3,6 +3,15 @@
 .foot.navbar {
     position: fixed;
     bottom: 0;
-    right: 0;
     left: 0;
+    width: 100%;
+
+    display: grid;
+  place-items: center;
+  padding: 50px;
+  z-index: -1;
 }
+
+* {
+    box-sizing: border-box;
+  }

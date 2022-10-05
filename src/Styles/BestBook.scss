@@ -45,3 +45,56 @@
 .carousel-control-prev-icon{
     color: $yellow;
 }
+h3 {
+    
+    color: $black;
+}
+
+button.btn {
+    border:solid $lavender;
+    background-color: $purple;
+}
+
+button.btn:hover{
+    border:solid $blue;
+    background-color: $blue;
+    color: $black;
+}
+
+button.delete:hover {
+    border:solid rgb(212, 71, 71);
+    background-color: rgb(212, 71, 71);
+    color: white;
+}
+
+button.btn.btn-primary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    color: whitesmoke;
+    width: 10vw;
+    background-color: $purple;
+    border-radius: 10px;
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30vw;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
