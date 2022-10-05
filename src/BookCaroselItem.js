@@ -24,7 +24,7 @@ class BookItem extends React.Component{
                 />
             
                 <p>{this.props.description}</p>
-                <Button variant="primary" onClick={this.deleteBook}>Delete</Button>
+                <Button onClick={this.props.deleteBookClick}>Delete</Button>
             </>
         )
     }
