@@ -42,6 +42,7 @@ class BestBooks extends React.Component {
   createBook = async (renderBook) => {
     try {
       const response = await axios.post(`${process.env.REACT_APP_HEROKU_PATH}/book`, renderBook);
+      // const response = await axios.post(`http://localhost:3002/book`, renderBook);
       const bookData = response.data;
       this.setState({books: [...this.state.books, bookData]})
     } catch (error) {
@@ -52,6 +53,7 @@ class BestBooks extends React.Component {
   deleteBook = async (bookDelete) => {
     try {
       const response = await axios.delete(`${process.env.REACT_APP_HEROKU_PATH}/book/${bookDelete._id}`);
+      // const response = await axios.delete(`http://localhost:3002/book/${bookDelete._id}`);
       console.log('response status: ', response.status)
       // const bookDeleteData = response.data;
       const filterData = this.state.books.filter(book => {return book._id !== bookDelete._id;});
