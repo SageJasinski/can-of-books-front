@@ -61,6 +61,10 @@ button.btn:hover{
     color: $black;
 }
 
+button.delete, button.Edit{
+    width: 100px;
+}
+
 button.delete:hover {
     border:solid rgb(212, 71, 71);
     background-color: rgb(212, 71, 71);
@@ -73,6 +77,12 @@ button.btn.btn-primary{
     align-items: center;
     margin: auto;
     margin-bottom: 20px;
+}
+
+.sideButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-label {
